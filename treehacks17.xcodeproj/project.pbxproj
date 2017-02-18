@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1B1EADD84276D1CE028A72 /* Pods_treehacks17Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1637BD48AAD3501D4E0EF9 /* Pods_treehacks17Tests.framework */; };
 		2D7E6BA31E57D62300C2EB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BA21E57D62300C2EB0B /* AppDelegate.swift */; };
 		2D7E6BA51E57D62300C2EB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BA41E57D62300C2EB0B /* ViewController.swift */; };
 		2D7E6BA81E57D62300C2EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E6BA61E57D62300C2EB0B /* Main.storyboard */; };
@@ -15,6 +16,18 @@
 		2D7E6BB01E57D62300C2EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E6BAE1E57D62300C2EB0B /* LaunchScreen.storyboard */; };
 		2D7E6BBB1E57D62300C2EB0B /* treehacks17Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BBA1E57D62300C2EB0B /* treehacks17Tests.swift */; };
 		2D7E6BC61E57D62300C2EB0B /* treehacks17UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BC51E57D62300C2EB0B /* treehacks17UITests.swift */; };
+		2D7E6BD41E57EB6300C2EB0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E6BD31E57EB6300C2EB0B /* GoogleService-Info.plist */; };
+		2D7E6BD51E57EB6300C2EB0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E6BD31E57EB6300C2EB0B /* GoogleService-Info.plist */; };
+		2D7E6BD61E57EB6300C2EB0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E6BD31E57EB6300C2EB0B /* GoogleService-Info.plist */; };
+		2D7E6BD81E57EE3F00C2EB0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BD71E57EE3F00C2EB0B /* SearchViewController.swift */; };
+		2D7E6BDC1E57F63C00C2EB0B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BDB1E57F63C00C2EB0B /* ChatViewController.swift */; };
+		2D7E6BE21E57F9F500C2EB0B /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE11E57F9F500C2EB0B /* MyAccountViewController.swift */; };
+		2D7E6BE41E580D1500C2EB0B /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE31E580D1500C2EB0B /* Conversation.swift */; };
+		2D7E6BE61E58104400C2EB0B /* DemoConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE51E58104400C2EB0B /* DemoConversation.swift */; };
+		2D7E6BE81E581ED900C2EB0B /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE71E581ED900C2EB0B /* ChatTableViewController.swift */; };
+		2D7E6BEA1E5835EB00C2EB0B /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE91E5835EB00C2EB0B /* ReminderTableViewController.swift */; };
+		349615BB4D2DAF726FF4406F /* Pods_treehacks17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E57D04EED703010AB666C1 /* Pods_treehacks17.framework */; };
+		C1660ED01167F263A3F5D9C2 /* Pods_treehacks17UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5449DCB25C3A5CB43BB8106B /* Pods_treehacks17UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08250ED957F341D75152C87A /* Pods-treehacks17UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17UITests/Pods-treehacks17UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		113566FF333760B837BE396E /* Pods-treehacks17Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17Tests/Pods-treehacks17Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1F2B423B0A6D8B44F098001E /* Pods-treehacks17Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17Tests/Pods-treehacks17Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2968DFBE46E5DA6D88963604 /* Pods-treehacks17UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17UITests/Pods-treehacks17UITests.release.xcconfig"; sourceTree = "<group>"; };
 		2D7E6B9F1E57D62300C2EB0B /* treehacks17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treehacks17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7E6BA21E57D62300C2EB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D7E6BA41E57D62300C2EB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +66,19 @@
 		2D7E6BC11E57D62300C2EB0B /* treehacks17UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = treehacks17UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7E6BC51E57D62300C2EB0B /* treehacks17UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = treehacks17UITests.swift; sourceTree = "<group>"; };
 		2D7E6BC71E57D62300C2EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D7E6BD31E57EB6300C2EB0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D7E6BD71E57EE3F00C2EB0B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2D7E6BDB1E57F63C00C2EB0B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2D7E6BE11E57F9F500C2EB0B /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		2D7E6BE31E580D1500C2EB0B /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		2D7E6BE51E58104400C2EB0B /* DemoConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoConversation.swift; sourceTree = "<group>"; };
+		2D7E6BE71E581ED900C2EB0B /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		2D7E6BE91E5835EB00C2EB0B /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		3878F1AA8F87AD961052AD78 /* Pods-treehacks17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17/Pods-treehacks17.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1637BD48AAD3501D4E0EF9 /* Pods_treehacks17Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_treehacks17Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		500B58CF540222F5A44D6633 /* Pods-treehacks17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17.release.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17/Pods-treehacks17.release.xcconfig"; sourceTree = "<group>"; };
+		5449DCB25C3A5CB43BB8106B /* Pods_treehacks17UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_treehacks17UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E57D04EED703010AB666C1 /* Pods_treehacks17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_treehacks17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349615BB4D2DAF726FF4406F /* Pods_treehacks17.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1B1EADD84276D1CE028A72 /* Pods_treehacks17Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +102,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1660ED01167F263A3F5D9C2 /* Pods_treehacks17UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DB439277D4B6B0BAA7883F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89E57D04EED703010AB666C1 /* Pods_treehacks17.framework */,
+				4C1637BD48AAD3501D4E0EF9 /* Pods_treehacks17Tests.framework */,
+				5449DCB25C3A5CB43BB8106B /* Pods_treehacks17UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D7E6B961E57D62300C2EB0B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +126,8 @@
 				2D7E6BB91E57D62300C2EB0B /* treehacks17Tests */,
 				2D7E6BC41E57D62300C2EB0B /* treehacks17UITests */,
 				2D7E6BA01E57D62300C2EB0B /* Products */,
+				CB36FA810196BA5098D8463B /* Pods */,
+				1DB439277D4B6B0BAA7883F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,11 +145,16 @@
 			isa = PBXGroup;
 			children = (
 				2D7E6BA21E57D62300C2EB0B /* AppDelegate.swift */,
+				2D7E6BDE1E57F9CA00C2EB0B /* Reminder */,
+				2D7E6BDD1E57F9C000C2EB0B /* Account */,
+				2D7E6BD91E57F61D00C2EB0B /* Search */,
 				2D7E6BA41E57D62300C2EB0B /* ViewController.swift */,
+				2D7E6BDA1E57F62800C2EB0B /* Chat */,
 				2D7E6BA61E57D62300C2EB0B /* Main.storyboard */,
 				2D7E6BAC1E57D62300C2EB0B /* Assets.xcassets */,
 				2D7E6BAE1E57D62300C2EB0B /* LaunchScreen.storyboard */,
 				2D7E6BB11E57D62300C2EB0B /* Info.plist */,
+				2D7E6BD31E57EB6300C2EB0B /* GoogleService-Info.plist */,
 				2D7E6BA91E57D62300C2EB0B /* treehacks17.xcdatamodeld */,
 			);
 			path = treehacks17;
@@ -128,6 +178,54 @@
 			path = treehacks17UITests;
 			sourceTree = "<group>";
 		};
+		2D7E6BD91E57F61D00C2EB0B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E6BD71E57EE3F00C2EB0B /* SearchViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		2D7E6BDA1E57F62800C2EB0B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E6BDB1E57F63C00C2EB0B /* ChatViewController.swift */,
+				2D7E6BE31E580D1500C2EB0B /* Conversation.swift */,
+				2D7E6BE71E581ED900C2EB0B /* ChatTableViewController.swift */,
+				2D7E6BE51E58104400C2EB0B /* DemoConversation.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		2D7E6BDD1E57F9C000C2EB0B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E6BE11E57F9F500C2EB0B /* MyAccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		2D7E6BDE1E57F9CA00C2EB0B /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E6BE91E5835EB00C2EB0B /* ReminderTableViewController.swift */,
+			);
+			name = Reminder;
+			sourceTree = "<group>";
+		};
+		CB36FA810196BA5098D8463B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3878F1AA8F87AD961052AD78 /* Pods-treehacks17.debug.xcconfig */,
+				500B58CF540222F5A44D6633 /* Pods-treehacks17.release.xcconfig */,
+				1F2B423B0A6D8B44F098001E /* Pods-treehacks17Tests.debug.xcconfig */,
+				113566FF333760B837BE396E /* Pods-treehacks17Tests.release.xcconfig */,
+				08250ED957F341D75152C87A /* Pods-treehacks17UITests.debug.xcconfig */,
+				2968DFBE46E5DA6D88963604 /* Pods-treehacks17UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7E6BCA1E57D62300C2EB0B /* Build configuration list for PBXNativeTarget "treehacks17" */;
 			buildPhases = (
+				AA2C0B97FED85354855679E6 /* [CP] Check Pods Manifest.lock */,
 				2D7E6B9B1E57D62300C2EB0B /* Sources */,
 				2D7E6B9C1E57D62300C2EB0B /* Frameworks */,
 				2D7E6B9D1E57D62300C2EB0B /* Resources */,
+				E1B877ACAC7BD7D452241D5D /* [CP] Embed Pods Frameworks */,
+				549077646CF6A1C13E6E1239 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7E6BCD1E57D62300C2EB0B /* Build configuration list for PBXNativeTarget "treehacks17Tests" */;
 			buildPhases = (
+				469B2920D4B8782C75CCAA19 /* [CP] Check Pods Manifest.lock */,
 				2D7E6BB21E57D62300C2EB0B /* Sources */,
 				2D7E6BB31E57D62300C2EB0B /* Frameworks */,
 				2D7E6BB41E57D62300C2EB0B /* Resources */,
+				A97575A74D0F8AB04370AB22 /* [CP] Embed Pods Frameworks */,
+				50FAA6447BCFEB8DFD2C7FF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7E6BD01E57D62300C2EB0B /* Build configuration list for PBXNativeTarget "treehacks17UITests" */;
 			buildPhases = (
+				D3E3B87A8C6DE758EA180E4C /* [CP] Check Pods Manifest.lock */,
 				2D7E6BBD1E57D62300C2EB0B /* Sources */,
 				2D7E6BBE1E57D62300C2EB0B /* Frameworks */,
 				2D7E6BBF1E57D62300C2EB0B /* Resources */,
+				23488ACA6E43717D794C7ECE /* [CP] Embed Pods Frameworks */,
+				D918F05680459F3F949A09B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7E6BB01E57D62300C2EB0B /* LaunchScreen.storyboard in Resources */,
+				2D7E6BD41E57EB6300C2EB0B /* GoogleService-Info.plist in Resources */,
 				2D7E6BAD1E57D62300C2EB0B /* Assets.xcassets in Resources */,
 				2D7E6BA81E57D62300C2EB0B /* Main.storyboard in Resources */,
 			);
@@ -248,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7E6BD51E57EB6300C2EB0B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,19 +364,165 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7E6BD61E57EB6300C2EB0B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23488ACA6E43717D794C7ECE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-treehacks17UITests/Pods-treehacks17UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		469B2920D4B8782C75CCAA19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		50FAA6447BCFEB8DFD2C7FF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-treehacks17Tests/Pods-treehacks17Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		549077646CF6A1C13E6E1239 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-treehacks17/Pods-treehacks17-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A97575A74D0F8AB04370AB22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-treehacks17Tests/Pods-treehacks17Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA2C0B97FED85354855679E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3E3B87A8C6DE758EA180E4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D918F05680459F3F949A09B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-treehacks17UITests/Pods-treehacks17UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B877ACAC7BD7D452241D5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-treehacks17/Pods-treehacks17-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D7E6B9B1E57D62300C2EB0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7E6BE41E580D1500C2EB0B /* Conversation.swift in Sources */,
 				2D7E6BA51E57D62300C2EB0B /* ViewController.swift in Sources */,
 				2D7E6BAB1E57D62300C2EB0B /* treehacks17.xcdatamodeld in Sources */,
+				2D7E6BE61E58104400C2EB0B /* DemoConversation.swift in Sources */,
+				2D7E6BE21E57F9F500C2EB0B /* MyAccountViewController.swift in Sources */,
+				2D7E6BD81E57EE3F00C2EB0B /* SearchViewController.swift in Sources */,
+				2D7E6BDC1E57F63C00C2EB0B /* ChatViewController.swift in Sources */,
 				2D7E6BA31E57D62300C2EB0B /* AppDelegate.swift in Sources */,
+				2D7E6BE81E581ED900C2EB0B /* ChatTableViewController.swift in Sources */,
+				2D7E6BEA1E5835EB00C2EB0B /* ReminderTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +672,7 @@
 		};
 		2D7E6BCB1E57D62300C2EB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3878F1AA8F87AD961052AD78 /* Pods-treehacks17.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 59Q8U3U6SS;
@@ -430,6 +686,7 @@
 		};
 		2D7E6BCC1E57D62300C2EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500B58CF540222F5A44D6633 /* Pods-treehacks17.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 59Q8U3U6SS;
@@ -443,6 +700,7 @@
 		};
 		2D7E6BCE1E57D62300C2EB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F2B423B0A6D8B44F098001E /* Pods-treehacks17Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +716,7 @@
 		};
 		2D7E6BCF1E57D62300C2EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 113566FF333760B837BE396E /* Pods-treehacks17Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +732,7 @@
 		};
 		2D7E6BD11E57D62300C2EB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08250ED957F341D75152C87A /* Pods-treehacks17UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 59Q8U3U6SS;
@@ -487,6 +747,7 @@
 		};
 		2D7E6BD21E57D62300C2EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2968DFBE46E5DA6D88963604 /* Pods-treehacks17UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 59Q8U3U6SS;
@@ -518,6 +779,7 @@
 				2D7E6BCC1E57D62300C2EB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D7E6BCD1E57D62300C2EB0B /* Build configuration list for PBXNativeTarget "treehacks17Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +788,7 @@
 				2D7E6BCF1E57D62300C2EB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D7E6BD01E57D62300C2EB0B /* Build configuration list for PBXNativeTarget "treehacks17UITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +797,7 @@
 				2D7E6BD21E57D62300C2EB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
