@@ -26,6 +26,15 @@
 		2D7E6BE61E58104400C2EB0B /* DemoConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE51E58104400C2EB0B /* DemoConversation.swift */; };
 		2D7E6BE81E581ED900C2EB0B /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE71E581ED900C2EB0B /* ChatTableViewController.swift */; };
 		2D7E6BEA1E5835EB00C2EB0B /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BE91E5835EB00C2EB0B /* ReminderTableViewController.swift */; };
+		2D7E6BEC1E583F4F00C2EB0B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BEB1E583F4F00C2EB0B /* ReminderTableViewCell.swift */; };
+		2D7E6BEE1E583F9F00C2EB0B /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BED1E583F9F00C2EB0B /* ChatTableViewCell.swift */; };
+		2D7E6BF01E584CDC00C2EB0B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BEF1E584CDC00C2EB0B /* SettingsTableViewController.swift */; };
+		2D7E6BF21E5857C600C2EB0B /* FirebaseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BF11E5857C600C2EB0B /* FirebaseStruct.swift */; };
+		2D7E6BF51E58ED0E00C2EB0B /* Rating1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BF41E58ED0E00C2EB0B /* Rating1ViewController.swift */; };
+		2D7E6BF71E58ED1C00C2EB0B /* Rating2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BF61E58ED1C00C2EB0B /* Rating2ViewController.swift */; };
+		2D7E6BF91E58ED2600C2EB0B /* Rating3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BF81E58ED2600C2EB0B /* Rating3ViewController.swift */; };
+		2D7E6BFB1E58ED3400C2EB0B /* Rating4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BFA1E58ED3400C2EB0B /* Rating4ViewController.swift */; };
+		2D7E6BFD1E590BA200C2EB0B /* Rating0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E6BFC1E590BA200C2EB0B /* Rating0ViewController.swift */; };
 		349615BB4D2DAF726FF4406F /* Pods_treehacks17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E57D04EED703010AB666C1 /* Pods_treehacks17.framework */; };
 		C1660ED01167F263A3F5D9C2 /* Pods_treehacks17UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5449DCB25C3A5CB43BB8106B /* Pods_treehacks17UITests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +83,15 @@
 		2D7E6BE51E58104400C2EB0B /* DemoConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoConversation.swift; sourceTree = "<group>"; };
 		2D7E6BE71E581ED900C2EB0B /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		2D7E6BE91E5835EB00C2EB0B /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		2D7E6BEB1E583F4F00C2EB0B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		2D7E6BED1E583F9F00C2EB0B /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		2D7E6BEF1E584CDC00C2EB0B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2D7E6BF11E5857C600C2EB0B /* FirebaseStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseStruct.swift; sourceTree = "<group>"; };
+		2D7E6BF41E58ED0E00C2EB0B /* Rating1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating1ViewController.swift; sourceTree = "<group>"; };
+		2D7E6BF61E58ED1C00C2EB0B /* Rating2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating2ViewController.swift; sourceTree = "<group>"; };
+		2D7E6BF81E58ED2600C2EB0B /* Rating3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating3ViewController.swift; sourceTree = "<group>"; };
+		2D7E6BFA1E58ED3400C2EB0B /* Rating4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating4ViewController.swift; sourceTree = "<group>"; };
+		2D7E6BFC1E590BA200C2EB0B /* Rating0ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating0ViewController.swift; sourceTree = "<group>"; };
 		3878F1AA8F87AD961052AD78 /* Pods-treehacks17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17/Pods-treehacks17.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1637BD48AAD3501D4E0EF9 /* Pods_treehacks17Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_treehacks17Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		500B58CF540222F5A44D6633 /* Pods-treehacks17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treehacks17.release.xcconfig"; path = "Pods/Target Support Files/Pods-treehacks17/Pods-treehacks17.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +162,7 @@
 		2D7E6BA11E57D62300C2EB0B /* treehacks17 */ = {
 			isa = PBXGroup;
 			children = (
+				2D7E6BF11E5857C600C2EB0B /* FirebaseStruct.swift */,
 				2D7E6BA21E57D62300C2EB0B /* AppDelegate.swift */,
 				2D7E6BDE1E57F9CA00C2EB0B /* Reminder */,
 				2D7E6BDD1E57F9C000C2EB0B /* Account */,
@@ -190,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7E6BDB1E57F63C00C2EB0B /* ChatViewController.swift */,
+				2D7E6BED1E583F9F00C2EB0B /* ChatTableViewCell.swift */,
 				2D7E6BE31E580D1500C2EB0B /* Conversation.swift */,
 				2D7E6BE71E581ED900C2EB0B /* ChatTableViewController.swift */,
 				2D7E6BE51E58104400C2EB0B /* DemoConversation.swift */,
@@ -201,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7E6BE11E57F9F500C2EB0B /* MyAccountViewController.swift */,
+				2D7E6BEF1E584CDC00C2EB0B /* SettingsTableViewController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -209,8 +230,22 @@
 			isa = PBXGroup;
 			children = (
 				2D7E6BE91E5835EB00C2EB0B /* ReminderTableViewController.swift */,
+				2D7E6BF31E58ECF100C2EB0B /* Survey */,
+				2D7E6BEB1E583F4F00C2EB0B /* ReminderTableViewCell.swift */,
 			);
 			name = Reminder;
+			sourceTree = "<group>";
+		};
+		2D7E6BF31E58ECF100C2EB0B /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E6BF41E58ED0E00C2EB0B /* Rating1ViewController.swift */,
+				2D7E6BFC1E590BA200C2EB0B /* Rating0ViewController.swift */,
+				2D7E6BF61E58ED1C00C2EB0B /* Rating2ViewController.swift */,
+				2D7E6BFA1E58ED3400C2EB0B /* Rating4ViewController.swift */,
+				2D7E6BF81E58ED2600C2EB0B /* Rating3ViewController.swift */,
+			);
+			name = Survey;
 			sourceTree = "<group>";
 		};
 		CB36FA810196BA5098D8463B /* Pods */ = {
@@ -514,13 +549,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7E6BE41E580D1500C2EB0B /* Conversation.swift in Sources */,
+				2D7E6BF01E584CDC00C2EB0B /* SettingsTableViewController.swift in Sources */,
 				2D7E6BA51E57D62300C2EB0B /* ViewController.swift in Sources */,
 				2D7E6BAB1E57D62300C2EB0B /* treehacks17.xcdatamodeld in Sources */,
+				2D7E6BFD1E590BA200C2EB0B /* Rating0ViewController.swift in Sources */,
 				2D7E6BE61E58104400C2EB0B /* DemoConversation.swift in Sources */,
+				2D7E6BF91E58ED2600C2EB0B /* Rating3ViewController.swift in Sources */,
+				2D7E6BFB1E58ED3400C2EB0B /* Rating4ViewController.swift in Sources */,
 				2D7E6BE21E57F9F500C2EB0B /* MyAccountViewController.swift in Sources */,
 				2D7E6BD81E57EE3F00C2EB0B /* SearchViewController.swift in Sources */,
+				2D7E6BF21E5857C600C2EB0B /* FirebaseStruct.swift in Sources */,
+				2D7E6BEC1E583F4F00C2EB0B /* ReminderTableViewCell.swift in Sources */,
 				2D7E6BDC1E57F63C00C2EB0B /* ChatViewController.swift in Sources */,
 				2D7E6BA31E57D62300C2EB0B /* AppDelegate.swift in Sources */,
+				2D7E6BEE1E583F9F00C2EB0B /* ChatTableViewCell.swift in Sources */,
+				2D7E6BF71E58ED1C00C2EB0B /* Rating2ViewController.swift in Sources */,
+				2D7E6BF51E58ED0E00C2EB0B /* Rating1ViewController.swift in Sources */,
 				2D7E6BE81E581ED900C2EB0B /* ChatTableViewController.swift in Sources */,
 				2D7E6BEA1E5835EB00C2EB0B /* ReminderTableViewController.swift in Sources */,
 			);

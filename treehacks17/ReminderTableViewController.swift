@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
 class ReminderTableViewController: UITableViewController {
+    
+    //Variables
+    var arrayWithAllReminders = [String: AnyObject]()
+    var arrayWithKeys = [String]()
 
+    
+    //Structure
+    let structure = FirebaseStruct()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setLogoStyles()
+        loadDataFromDatabase()
     }
 
     func setLogoStyles(){
@@ -27,8 +37,27 @@ class ReminderTableViewController: UITableViewController {
         navigationItem.titleView = logoView
     }
 
+    func loadDataFromDatabase(){
+        
+        arrayWithAllReminders.removeAll()
+        
+        let refForReminder = self.structure.ref.child("reminders/testPatient")
+        refForReminder.observeSingleEvent(of: .value, with: { snapshot in
+        
+            if snapshot.exists() || snapshot.value != nil {
+            
+                self.arrayWithAllReminders = snapshot.value as! [String : AnyObject]
+                
+                for (key, _) in self.arrayWithAllReminders {
+                    self.arrayWithKeys.append(key)
+                }
+                
+                self.tableView.reloadData()
+            }
+        })
+    }
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -36,36 +65,44 @@ class ReminderTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return arrayWithAllReminders.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell", for: indexPath) as! ReminderTableViewCell
+        
+        //Fill label in cell
+        let key = arrayWithKeys[indexPath.row]
+        let reminder = arrayWithAllReminders[key]!
+        cell.notificationTitle.text = reminder["message"] as? String
+        
+        //Style of the notificationmarker
+        cell.notificationMarker.layer.masksToBounds = true;
+        cell.notificationMarker.layer.cornerRadius = 8
+        cell.notificationMarker.clipsToBounds = true
+        cell.notificationMarker.isHidden = false
 
         return cell
     }
-
-
-    /*
+    
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

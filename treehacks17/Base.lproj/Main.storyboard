@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chatDoctor" id="imc-KC-Z7S">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chatDoctor" id="imc-KC-Z7S" customClass="ChatTableViewCell" customModule="treehacks17" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="imc-KC-Z7S" id="zpR-qF-rcy">
@@ -91,6 +91,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="chatMessageLabel" destination="T71-RO-jGm" id="TmL-Lv-PcA"/>
+                                    <outlet property="profilePicture" destination="etq-eU-ych" id="wi7-4G-k76"/>
+                                    <outlet property="usernameLabel" destination="L0M-H4-SWT" id="wak-xB-vZu"/>
                                     <segue destination="TL6-XA-Yzs" kind="show" id="TNa-w5-519"/>
                                 </connections>
                             </tableViewCell>
@@ -125,25 +128,6 @@
             </objects>
             <point key="canvasLocation" x="3188" y="295"/>
         </scene>
-        <!--My Account-->
-        <scene sceneID="fcA-za-yA1">
-            <objects>
-                <viewController id="BgG-zE-7GF" customClass="MyAccountViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jhE-WD-f59"/>
-                        <viewControllerLayoutGuide type="bottom" id="HKC-kP-EYH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K8i-vn-AVx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="4" title="My Account" image="myAccount" id="c15-m2-WnR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CEz-tM-un6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="369" y="1624"/>
-        </scene>
         <!--Reminder Table View Controller-->
         <scene sceneID="LNR-qT-0pV">
             <objects>
@@ -153,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reminderCell" id="HFK-w9-KYO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reminderCell" id="HFK-w9-KYO" customClass="ReminderTableViewCell" customModule="treehacks17" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFK-w9-KYO" id="CQr-YQ-uQM">
@@ -163,12 +147,12 @@
                                         <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-Cx-ifY">
                                             <color key="backgroundColor" red="0.098039215690000001" green="0.72549019609999998" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="16" id="dVT-Kn-52p"/>
-                                                <constraint firstAttribute="height" constant="16" id="qek-fV-Kbk"/>
+                                                <constraint firstAttribute="width" constant="12" id="dVT-Kn-52p"/>
+                                                <constraint firstAttribute="height" constant="12" id="qek-fV-Kbk"/>
                                             </constraints>
                                             <color key="tintColor" red="0.098039215690000001" green="0.72549019609999998" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s6-uf-Qq4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s6-uf-Qq4">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -182,6 +166,11 @@
                                         <constraint firstItem="2s6-uf-Qq4" firstAttribute="centerY" secondItem="WTV-Cx-ifY" secondAttribute="centerY" id="o8s-SY-4DV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="notificationMarker" destination="WTV-Cx-ifY" id="Qjv-sB-YI0"/>
+                                    <outlet property="notificationTitle" destination="2s6-uf-Qq4" id="14h-xC-r6Q"/>
+                                    <segue destination="We7-y9-I1g" kind="show" id="1Qh-jf-s0O"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -193,7 +182,77 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XB9-gb-kqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2325.5999999999999" y="1079.0104947526238"/>
+            <point key="canvasLocation" x="3264.8000000000002" y="1079.0104947526238"/>
+        </scene>
+        <!--Rating1 View Controller-->
+        <scene sceneID="dtl-6w-n46">
+            <objects>
+                <viewController id="Xat-Fd-sY1" customClass="Rating1ViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eTV-BZ-nFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ut-WD-MIM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qm9-HI-UWM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gMA-fn-QGE">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate Dr. Sanchez?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-8D-E4J">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="UnZ-JM-5dP">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="Xat-Fd-sY1" eventType="valueChanged" id="X4A-QO-EpJ"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UnZ-JM-5dP" secondAttribute="trailing" constant="15" id="5fs-M8-VqU"/>
+                                    <constraint firstItem="UnZ-JM-5dP" firstAttribute="leading" secondItem="gMA-fn-QGE" secondAttribute="leading" constant="15" id="zlc-dc-Zha"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neutral" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-zO-Xdg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdV-9J-Zut">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="Xat-Fd-sY1" eventType="touchUpInside" id="P2u-NS-MXz"/>
+                                    <segue destination="g46-xq-5vG" kind="show" id="XD8-mX-eya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647155523300171" green="0.15027236938476562" blue="0.66134041547775269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gMA-fn-QGE" secondAttribute="trailing" constant="25" id="4Nx-YV-EpH"/>
+                            <constraint firstItem="gMA-fn-QGE" firstAttribute="centerY" secondItem="qm9-HI-UWM" secondAttribute="centerY" id="BIw-sp-aNf"/>
+                            <constraint firstItem="gMA-fn-QGE" firstAttribute="leading" secondItem="qm9-HI-UWM" secondAttribute="leading" constant="25" id="QPB-Dh-LkZ"/>
+                            <constraint firstItem="mdV-9J-Zut" firstAttribute="centerX" secondItem="qm9-HI-UWM" secondAttribute="centerX" id="iV9-LD-6na"/>
+                            <constraint firstItem="uFo-zO-Xdg" firstAttribute="top" secondItem="gMA-fn-QGE" secondAttribute="bottom" constant="8" id="lTO-en-yuP"/>
+                            <constraint firstItem="4ut-WD-MIM" firstAttribute="top" secondItem="mdV-9J-Zut" secondAttribute="bottom" constant="50" id="t4l-DT-ykw"/>
+                            <constraint firstItem="gMA-fn-QGE" firstAttribute="centerX" secondItem="qm9-HI-UWM" secondAttribute="centerX" id="t8j-FB-TQd"/>
+                            <constraint firstItem="uFo-zO-Xdg" firstAttribute="centerX" secondItem="gMA-fn-QGE" secondAttribute="centerX" id="vS2-U6-Vbq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="mdV-9J-Zut" id="tTZ-bi-0yy"/>
+                        <outlet property="slider" destination="UnZ-JM-5dP" id="UJg-4x-cj2"/>
+                        <outlet property="sliderResultLabel" destination="uFo-zO-Xdg" id="HRP-BB-p3I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2A-nk-hWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4806" y="1076"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nrr-dQ-udt">
@@ -209,7 +268,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="LDr-K5-kZs"/>
                         <segue destination="K70-8h-DfD" kind="relationship" relationship="viewControllers" id="Hlc-Q5-gQo"/>
                         <segue destination="yfF-12-ZXr" kind="relationship" relationship="viewControllers" id="tHn-ob-Wwz"/>
-                        <segue destination="BgG-zE-7GF" kind="relationship" relationship="viewControllers" id="Ltq-j6-5Z5"/>
+                        <segue destination="b6R-jl-VHU" kind="relationship" relationship="viewControllers" id="gVB-EI-EUm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVa-9x-qxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,7 +281,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K70-8h-DfD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Chat" image="chat" id="eOy-9S-4te"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gzi-nY-8AB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gzi-nY-8AB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -252,7 +311,1256 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAR-Er-fNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.8" y="1078.1109445277361"/>
+            <point key="canvasLocation" x="2324" y="1078.1109445277361"/>
+        </scene>
+        <!--Settings Table View Controller-->
+        <scene sceneID="5VG-Dl-Wi9">
+            <objects>
+                <tableViewController id="LvD-mc-JVV" customClass="SettingsTableViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Yd-ao-ZIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="MY ACCOUNT" id="zMT-Kf-naD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="pIp-Oe-HoQ">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pIp-Oe-HoQ" id="hyf-Zl-1a9">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Account information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZb-Gp-OSz">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DZb-Gp-OSz" firstAttribute="centerY" secondItem="hyf-Zl-1a9" secondAttribute="centerY" id="WpA-ji-GYs"/>
+                                                <constraint firstItem="DZb-Gp-OSz" firstAttribute="leading" secondItem="hyf-Zl-1a9" secondAttribute="leadingMargin" constant="8" id="sXi-tv-iN0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QfR-dk-jY6" kind="show" id="8wU-hw-VEe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="SETTINGS" id="DeF-Qj-1as">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="X80-ES-VYf">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X80-ES-VYf" id="7bc-vO-EX2">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change App Permissions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fd-Pj-YWh">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3fd-Pj-YWh" firstAttribute="centerY" secondItem="7bc-vO-EX2" secondAttribute="centerY" id="C9a-h9-4Mj"/>
+                                                <constraint firstItem="3fd-Pj-YWh" firstAttribute="leading" secondItem="7bc-vO-EX2" secondAttribute="leadingMargin" constant="8" id="U8I-5a-6HB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="DEVICES" id="ctZ-OH-XZp">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="gb9-2D-bbK">
+                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gb9-2D-bbK" id="9gZ-pn-SCf">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pair iWatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-LG-fEq">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zNB-LG-fEq" firstAttribute="leading" secondItem="9gZ-pn-SCf" secondAttribute="leadingMargin" constant="8" id="ed1-FN-6lQ"/>
+                                                <constraint firstItem="zNB-LG-fEq" firstAttribute="centerY" secondItem="9gZ-pn-SCf" secondAttribute="centerY" id="zOl-Ii-ZV8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="ABOUT" id="l16-i9-84u">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="ruM-p5-Lbm">
+                                        <rect key="frame" x="0.0" y="420" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ruM-p5-Lbm" id="eIc-IN-8wp">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-be-C5R">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dmR-be-C5R" firstAttribute="leading" secondItem="eIc-IN-8wp" secondAttribute="leadingMargin" constant="8" id="Nwp-Zq-lkH"/>
+                                                <constraint firstItem="dmR-be-C5R" firstAttribute="centerY" secondItem="eIc-IN-8wp" secondAttribute="centerY" id="QMS-qQ-Ira"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SiC-hy-99l" kind="show" id="hQP-d9-Sc9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="nxw-Qh-rGM">
+                                        <rect key="frame" x="0.0" y="464" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nxw-Qh-rGM" id="2HS-ok-MTR">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-Db-f1f">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wsf-Db-f1f" firstAttribute="centerY" secondItem="2HS-ok-MTR" secondAttribute="centerY" id="gjk-wT-3qP"/>
+                                                <constraint firstItem="Wsf-Db-f1f" firstAttribute="leading" secondItem="2HS-ok-MTR" secondAttribute="leadingMargin" constant="8" id="owq-Mj-7pG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hph-LP-QTa" kind="show" id="aSo-hg-vB6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="LvD-mc-JVV" id="1SW-Tc-Npj"/>
+                            <outlet property="delegate" destination="LvD-mc-JVV" id="fDW-Tb-XrF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="n7j-Nv-YG8"/>
+                    <connections>
+                        <outlet property="tblView" destination="5Yd-ao-ZIw" id="uXf-Mc-3Px"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UsS-0Z-lt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="1817"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="X7Y-pV-cwu">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="QfR-dk-jY6" customClass="ChangePasswordViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f3C-e3-a6Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="wig-CM-dZ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1zo-wi-hxg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHH-Yy-4em">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obL-VK-KwT">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6me-1Y-OqR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="0Ca-bi-AqA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1v0-rg-5zb">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LMq-Ox-yQS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="i6I-ar-QK4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g32-UP-zr7">
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="b9k-Q1-6Ih">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="woN-Md-rtA"/>
+                                </constraints>
+                                <state key="normal" title="Change account information">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="woN-Md-rtA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="woN-Md-rtA"/>
+                                        <exclude reference="b9k-Q1-6Ih"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-uX-XY8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23.5" id="6Ii-LQ-1bt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Ii-LQ-1bt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6Ii-LQ-1bt"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IFK-rX-SSK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="AlQ-Qf-Zzu"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="509104057.41113198">
+                                    <!--2017-02-18 09:47:37 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6me-1Y-OqR" firstAttribute="top" secondItem="obL-VK-KwT" secondAttribute="bottom" constant="5" id="7nz-6u-rdu"/>
+                            <constraint firstItem="obL-VK-KwT" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leadingMargin" constant="10" id="BFk-VA-jKR"/>
+                            <constraint firstItem="LMq-Ox-yQS" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leadingMargin" constant="10" id="C8T-Kv-Ref"/>
+                            <constraint firstItem="b3B-uX-XY8" firstAttribute="centerX" secondItem="1zo-wi-hxg" secondAttribute="centerX" id="CZp-85-Lhv"/>
+                            <constraint firstItem="1v0-rg-5zb" firstAttribute="top" secondItem="6me-1Y-OqR" secondAttribute="bottom" constant="20" id="IRc-gA-Uu0"/>
+                            <constraint firstItem="IFK-rX-SSK" firstAttribute="top" secondItem="1v0-rg-5zb" secondAttribute="bottom" id="J1b-xs-kgf"/>
+                            <constraint firstItem="6me-1Y-OqR" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leadingMargin" constant="10" id="LIh-xn-AEO"/>
+                            <constraint firstAttribute="trailing" secondItem="g32-UP-zr7" secondAttribute="trailing" id="Nq9-d0-rb0"/>
+                            <constraint firstItem="1v0-rg-5zb" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leadingMargin" constant="10" id="PmU-hM-HNC"/>
+                            <constraint firstItem="g32-UP-zr7" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leading" id="Tvh-92-7GB"/>
+                            <constraint firstItem="IFK-rX-SSK" firstAttribute="trailing" secondItem="1zo-wi-hxg" secondAttribute="trailingMargin" id="Wfh-Ua-9Y9"/>
+                            <constraint firstItem="WHH-Yy-4em" firstAttribute="top" secondItem="b3B-uX-XY8" secondAttribute="bottom" constant="20" id="ZYt-TS-vtn"/>
+                            <constraint firstItem="b3B-uX-XY8" firstAttribute="top" secondItem="f3C-e3-a6Z" secondAttribute="bottom" constant="25" id="bqE-LO-je1"/>
+                            <constraint firstItem="IFK-rX-SSK" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leadingMargin" id="guc-M4-lyd"/>
+                            <constraint firstItem="LMq-Ox-yQS" firstAttribute="top" secondItem="WHH-Yy-4em" secondAttribute="bottom" constant="5" id="hri-Ip-qp1"/>
+                            <constraint firstItem="wig-CM-dZ1" firstAttribute="top" secondItem="g32-UP-zr7" secondAttribute="bottom" id="rg3-N4-GOp"/>
+                            <constraint firstItem="WHH-Yy-4em" firstAttribute="leading" secondItem="1zo-wi-hxg" secondAttribute="leadingMargin" constant="10" id="tkH-kY-57K"/>
+                            <constraint firstItem="obL-VK-KwT" firstAttribute="top" secondItem="LMq-Ox-yQS" secondAttribute="bottom" constant="5" id="uRI-ds-eD9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LMq-Ox-yQS" secondAttribute="trailing" constant="10" id="vm0-gL-QuE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6me-1Y-OqR" secondAttribute="trailing" constant="10" id="wN3-bf-B1f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UR1-vl-ytJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.20000000000005" y="1077.2113943028487"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xV9-md-z6z">
+            <objects>
+                <viewController storyboardIdentifier="privacyPolicyView" id="SiC-hy-99l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ao-ec-GOc"/>
+                        <viewControllerLayoutGuide type="bottom" id="BoH-kP-cBE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qna-V3-GX8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rM-Jd-xeh">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnS-At-k7e">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="139.5" id="s1o-Ct-niT">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="23.5" id="tRr-xC-W4t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="s1o-Ct-niT"/>
+                                                <exclude reference="tRr-xC-W4t"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="s1o-Ct-niT"/>
+                                                <include reference="tRr-xC-W4t"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeD-4x-lJj">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Ac4-W1-5aH"/>
+                                        </constraints>
+                                        <string key="text">Privacy Policy on Drivn
+
+Effective Date: 27.11.2016
+
+Please read this Privacy Policy carefully to get an understanding of how we collect, use, disclose, protect and otherwise handle information about you.
+
+The content of this privacy policy includes:
+
+The information we collect about you
+
+What we are doing with this information
+
+The choices you have about this
+
+This Privacy Policy applies to information we collect when you use our websites, mobile applications and other online products and services (collectively, the “Services”), or when you otherwise interact with us.
+
+It is possible that from time to time we might change the provisions of this Privacy Policy. But if we do, we will notify you. You can also see this from the date above. We encourage all of our users, to review our Privacy Policy whenever they use one of our services, to stay informed about us, our practices and the ways they can help protect their own privacy.
+
+What information does Drivn actually collect about you whileyou are using our services?
+
+Information provided by users
+
+We collect the information you provide to us, while you create or update an account on our website or also use on of our services and communicate with us. Information we might collect can include:
+
+Information about the user, like e.g. name, username, gender, birth date, email address, phone number and photos
+
+Messages and forum information such as discussion group posts, messages to other users or comments
+
+Other background information, contact and demographic information, such as your occupation, personal URL, travel history, plans interests and self-descriptions about you
+
+If you have given us permission information stored on your mobile device, like e.g. photos calendar information and contacts
+
+Information from other Drivn users such as ratings, friend connections, public references, reviews and interactions with them
+
+Information we collect automatically
+
+It is possible that we automatically collect some information about you when you use one of our services like e.g.:
+
+Device information: We collect the device information, from which you are accessing our services, including hardware model, operation system and version, mobile network, unique device identifiers
+
+Location information: We may collect information about the location from where you access our mobile application or website
+
+Log information: We collect information about the frequency how often you use our services, browsing type and language, internet protocol address and internet service provider
+
+Cookies and other tracking technologies: We automatically collect information using cookies, web beacons and other tracking technologies to enhance our services and your user experience with us. We further can monitor with this user activity, count visits, and try to understand our campaign activities. If you want to learn how to delete your cookies, please visit the website of the browser you are using
+
+Information we collect from other sources
+
+We also obtain information from other sources and combine that information with information we have been collecting with our services. To give you an example: if you create or log into an account on Drivn through a third-party social networking side, we will have access on information in accordance with the authorization procedures determined by such third-party social networking site.
+Some of this information might be shared with other users, like e.g. the friend connections of you to other Drivn users.
+ 
+So what are we doing with all these information?
+
+The privacy policy is very important to us. We don’t just collect information just solely out of the reason that we can. We might use your information for example to:
+
+Protect your safety and the users of Drivn
+
+Continuously improve our services
+
+Send technical notices, updates and security alerts to help you
+
+Communicate with you about our services if you might have problems
+
+Respond to your comments, questions and requests in our customer service center
+
+Monitor and analyze trends to improve our products and services and therefore your own user experience
+
+Personalize the services, which includes content which is specifically aligned to your interests
+
+Link and combine with other information from third parties to help understand your needs and provide you with better service
+
+Sharing of information
+
+We promise not to share the information about you with outside parties except in the cases described below:
+
+With your consent and only if you subsequently agree to provide such information which will be shared with third parties;
+
+With third party vendors, consultants and other service providers who work with us together on projects and need to access such information to carry out their work for us;
+
+With other users who have access and use our services in accordance with the privacy settings you have been set up
+
+With search engines in order to index the content you have been provided on Drivn as part of a discussion forum or public profile;
+
+In connection with, or during negotiations of, any merger, sale of company assets, financing or acquisition of all or a portion of our business to another company;
+
+If we believe that disclosure is reasonably necessary to comply with any applicable law, regulation, legal process or governmental request;
+
+To enforce our agreements, policies and Terms of Use to protect the security or integrity of our Services; or to protect Drivn, our users or the public from harm or illegal activities.
+
+Social Media tools
+
+On Drivn we offer social sharing features or other integrated services which let you share information with other media and other way round. The background of such features is the possibility to share information with your friends and public depending on the settings you establish with the third party that provides the social sharing feature. For more information about the purpose and scope of data collection and processing in connection with social sharing features, please visit the privacy policies of the third parties that provide these social sharing features. Drivn also allows you to access Google Maps. Please keep in mind that when you use Google Maps, you are subject to Google’s privacy policy, as amended by Google from time to time.
+
+Third Party Links
+
+Occasionally, at our discretion, we may include or offer third party products or services as part of our services. These third parties may have separate and independent privacy policies. Due to we cannot track what they are doing with the information they are gathering we have no responsibility or liability for the activities of these third parties. Nevertheless, our goal is to protect the integrity of our services and welcome any feedback about these third parties.
+
+Advertisement and analytic services provided by others
+
+We may allow third parties to serve advertisements for us across the Internet. This can also include analytics services in relation to the use of our Services. These providers use cookies, web beacons and other technologies to collect information about your use of the services and other websites, including your IP address and information about your web browser and operating system, pages viewed, time spent on pages, links clicked and conversion information. This information may be used by Drivn and others to e.g. analyze and track data, determine the popularity of certain content, deliver advertising and content aligned to your interests on our services and other websites and better understand your online activity. Please keep in mind that we might share aggregated, non-personal information, or personal information in a hashed, non-human readable form, with these third parties. For example, we may engage a third party data provider who may collect web log data from you or place or recognize a unique cookie on your browser to enable you to receive customized ads or content.
+
+What do we do to protect the information?
+
+Drivn puts very high importance on the protection of the information about you and takes reasonable measures to prevent you from loss, theft, unauthorized access, disclosure, alteration and destruction.
+
+What choices do you have relating to your privacy?
+
+Privacy settings
+
+Please adjust the information you want to share with others on your profile.
+
+Account information
+
+You can update, correct or deactivate your account at any time in our settings menu. Nevertheless if you deactivated your account on Drivn we might retain some information as required by law, for legitimate business purposes and to protect member safety.
+
+Location information via mobile device
+
+You have the ability to turn location-based services on and off by adjusting the settings of your Internet browser or mobile device and by following the standard uninstall process and removing Drivn application from your device. Doing so, however, may mean that you cannot use all or some of our services.
+
+Cookies
+
+Most web browsers are set on default to accept cookies. Nevertheless you can set your browser to remove or reject browser cookies. For further information how you can do this, please visit the website of your browser.
+
+But please consider, that all of our functions might not work completely if you have deactivated the cookies.
+
+Contact us
+
+If you have any questions regarding our privacy policy you are warmly welcomed to contact us via mathiasklenk@gmx.de
+</string>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ac4-W1-5aH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="Ac4-W1-5aH"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bnS-At-k7e" firstAttribute="top" secondItem="8rM-Jd-xeh" secondAttribute="top" constant="20" id="2HB-Dl-UfQ"/>
+                                    <constraint firstItem="UeD-4x-lJj" firstAttribute="centerX" secondItem="bnS-At-k7e" secondAttribute="centerX" id="2ca-4v-6bM"/>
+                                    <constraint firstItem="UeD-4x-lJj" firstAttribute="leading" secondItem="8rM-Jd-xeh" secondAttribute="leading" constant="20" id="71d-iI-KNI"/>
+                                    <constraint firstItem="UeD-4x-lJj" firstAttribute="leading" secondItem="8rM-Jd-xeh" secondAttribute="leading" constant="20" id="Slr-nu-54Y"/>
+                                    <constraint firstItem="UeD-4x-lJj" firstAttribute="top" secondItem="bnS-At-k7e" secondAttribute="bottom" constant="10" id="XCk-dL-VMO"/>
+                                    <constraint firstItem="UeD-4x-lJj" firstAttribute="leading" secondItem="8rM-Jd-xeh" secondAttribute="leading" constant="20" id="c4S-lZ-M8I"/>
+                                    <constraint firstItem="bnS-At-k7e" firstAttribute="centerX" secondItem="8rM-Jd-xeh" secondAttribute="centerX" id="eTX-lx-FMd"/>
+                                    <constraint firstAttribute="bottom" secondItem="UeD-4x-lJj" secondAttribute="bottom" constant="96" id="lGS-y7-U92"/>
+                                    <constraint firstItem="UeD-4x-lJj" firstAttribute="top" secondItem="bnS-At-k7e" secondAttribute="bottom" constant="10" id="opc-KJ-hnv"/>
+                                    <constraint firstAttribute="trailing" secondItem="UeD-4x-lJj" secondAttribute="trailing" constant="20" id="pdy-g1-ylV"/>
+                                    <constraint firstAttribute="bottom" secondItem="UeD-4x-lJj" secondAttribute="bottom" constant="20" id="tgi-Tq-Chq"/>
+                                    <constraint firstAttribute="trailing" secondItem="UeD-4x-lJj" secondAttribute="trailing" constant="20" id="wvE-B8-Fdy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="bnS-At-k7e"/>
+                                        <exclude reference="UeD-4x-lJj"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="2HB-Dl-UfQ"/>
+                                        <exclude reference="eTX-lx-FMd"/>
+                                        <exclude reference="Slr-nu-54Y"/>
+                                        <exclude reference="wvE-B8-Fdy"/>
+                                        <exclude reference="tgi-Tq-Chq"/>
+                                        <exclude reference="pdy-g1-ylV"/>
+                                        <exclude reference="c4S-lZ-M8I"/>
+                                        <exclude reference="lGS-y7-U92"/>
+                                        <exclude reference="2ca-4v-6bM"/>
+                                        <exclude reference="XCk-dL-VMO"/>
+                                        <exclude reference="opc-KJ-hnv"/>
+                                        <exclude reference="71d-iI-KNI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="bnS-At-k7e"/>
+                                        <include reference="UeD-4x-lJj"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="2HB-Dl-UfQ"/>
+                                        <include reference="eTX-lx-FMd"/>
+                                        <exclude reference="Slr-nu-54Y"/>
+                                        <exclude reference="wvE-B8-Fdy"/>
+                                        <exclude reference="tgi-Tq-Chq"/>
+                                        <include reference="pdy-g1-ylV"/>
+                                        <include reference="c4S-lZ-M8I"/>
+                                        <include reference="lGS-y7-U92"/>
+                                        <include reference="2ca-4v-6bM"/>
+                                        <include reference="XCk-dL-VMO"/>
+                                        <exclude reference="opc-KJ-hnv"/>
+                                        <exclude reference="71d-iI-KNI"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8rM-Jd-xeh" firstAttribute="leading" secondItem="Qna-V3-GX8" secondAttribute="leading" id="04X-F7-qhN"/>
+                            <constraint firstItem="8rM-Jd-xeh" firstAttribute="top" secondItem="4ao-ec-GOc" secondAttribute="bottom" id="Y5g-lh-RdF"/>
+                            <constraint firstItem="BoH-kP-cBE" firstAttribute="top" secondItem="8rM-Jd-xeh" secondAttribute="bottom" id="fPa-XX-qn4"/>
+                            <constraint firstAttribute="trailing" secondItem="8rM-Jd-xeh" secondAttribute="trailing" id="nIn-XA-nfw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8rM-Jd-xeh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="fPa-XX-qn4"/>
+                                <exclude reference="nIn-XA-nfw"/>
+                                <exclude reference="Y5g-lh-RdF"/>
+                                <exclude reference="04X-F7-qhN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8rM-Jd-xeh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="fPa-XX-qn4"/>
+                                <include reference="nIn-XA-nfw"/>
+                                <include reference="Y5g-lh-RdF"/>
+                                <include reference="04X-F7-qhN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VU2-ZR-3LL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1327" y="1079"/>
+        </scene>
+        <!--Terms Of Use View Controller-->
+        <scene sceneID="XeC-vc-d8k">
+            <objects>
+                <viewController storyboardIdentifier="termsOfUseView" id="Hph-LP-QTa" customClass="TermsOfUseViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tyL-f9-fHe"/>
+                        <viewControllerLayoutGuide type="bottom" id="hby-5B-ESc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y5C-9Y-eDe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT5-Zq-5zW">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Use / EULA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX6-Z9-uZW">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23.5" id="ARg-lr-z4u"/>
+                                            <constraint firstAttribute="width" constant="139.5" id="Bhu-zs-CjT">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Bhu-zs-CjT"/>
+                                                <exclude reference="ARg-lr-z4u"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Bhu-zs-CjT"/>
+                                                <include reference="ARg-lr-z4u"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ev9-Hs-mMS">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="zhh-N2-U1E"/>
+                                        </constraints>
+                                        <string key="text">Terms of use and end user license agreement
+
+Last update: 27.11.2016
+
+Please read this terms carefully. By registering on our website, accessing or using our services you agree to these terms of use and all terms which are incorporated with them. If you don’t agree with these terms, please don’t use Drivn.
+
+These terms written here apply to both our website, and our mobile application or other online products and services of Drivn.
+
+If you are using our services on behalf of another entity, e.g. you are authorized and represent another entity, you accept these terms on such entity’s behalf and the represented entity will be responsible in case of violation of our terms. A violation or failure in using our services and the terms may result in termination or suspension of your rights to use our services. Further they may include legal action by Drivn and/or civil and/or criminal penalties.
+
+Nevertheless we still reserve ourselves the right to make changes or modifications of these terms, policy and guideline of our services at any time. In case of any change of these terms, Drivn will provide notice of such changes. You can see this on the date at the top, if some changes have been made. If you continue to use our services this will constitute your acceptance of the changes and modifications. Therefore you are encouraged to frequently review our terms, policies and guidelines to understand our products.
+
+If you want to learn further what kind of information Drivn collects, uses and discloses about our members, please visit our privacy policy site. Further by accessing and using our services you agree to adhere to our community guidelines.
+
+If you have further questions about these terms, please contact us via mathiasklenk@gmx.de
+
+ 
+
+Registration of an account
+If you want to be part of the Drivn community you have to be at least 18 or above. By registering on our website, you represent that you are at least 18 years old. For accessing and using some of our services and products you need to register with your email address or login credentials from third-party social media sites.
+
+By creating an account with your email address, you agree to create a unique password, that you do not use with any other online product or service. Further you agree during the registration process to (1) provice accurate and truthful information about you, which is current; (2) update your account in case something changes; (3) maintain the security of your account by protecting password; (4) restricting access to your account; (5) notify Drivn in case you discover any security breaches related to our services and (6) take responsibility in case an unauthorized access happened with your account.
+
+ 
+
+The usage and interaction with other members
+#2.1 Responsibility of usage
+
+You are having the sole responsibility when you are interacting with other users. With Drivn we want to provide a platform for members to learn about one another’s travels and journeys, engage in activities and communicate with one another. Drivn is not a party to, has no involvement or interest in, makes no representations or warranties as to, and has no responsibility or liability with respect to any communications, transactions, interactions, disputes or any relations whatsoever between you and any other user, person or organization. Therefore you are solely responsible for your interactions with other users while using our products or services. Though we reserve ourselves the right to monitor interactions between you and other users to check for any violations of our community guidelines.
+
+But keep in mind, that Drivn is just a platform that enables you to communicate and interact with other people around the world. We cannot be responsible for the interactions that you have with other Drivn members.
+
+#2.2 Verification of identity
+
+It is impossible for us to confirm that each user’s identity is correct. Although we provide tools, which are intended to assist a identity verification, you are solely responsible for determining the identity and suitability of others you are interacting with. Especially we encourage you to take precautions when interacting and meeting other users which represent a stranger for you.
+
+#2.3 Release clause
+
+Due to Drivn is just a platform, you release us to the fullest extent by applicable law from any claim you may have resulting from a dispute with one or more other users. This also includes all of our officers, directors, users, employees, agents and affiliates. Further it covers any demands, damages (actual and consequential) of every kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of our in any way connected with such disputes.
+
+ 
+
+Regulations about content and member conduct
+Our services and products include interaction with other users, where you or other users can create and post content, messages, data, information, text, music, sound, videos, graphics or items and materials, which can be summarized under “user content”. You are solely responsible for your use of such interactive content and agree that your use of these content is at your own risk.
+
+#3.1 Member content restrictions
+
+You are the solely person, who is responsible for the content you submit, post or transmit via one of our services or products. You agree that all content you are posting, submitting or creating is in line with our guidelines and is not violating one of the following:
+
+unlawful, libelous, defamatory, harassing, threatening, invasive of privacy or publicity rights, or that would otherwise create liability or violate any local, state, national or international law;
+contains nudity, sexually explicit content or are otherwise obscene, pornographic, indecent, lewd, suggestive or sexually exploitative of minors;
+may disparage any ethnic, racial, sexual or religious group by stereotypical depiction or is otherwise abusive or inflammatory;
+depicts the use of illicit drugs;
+contains offensive language or images or is otherwise objectionable;
+incites violence or characterizes violence as acceptable, glamorous or desirable;
+contains unsolicited promotions, political campaigning, advertising or solicitations, without our prior written consent;
+contains private or personal information about another person, unless such person has agreed to the disclosure of this information;
+contains viruses, corrupted data or other harmful, disruptive or destructive file viruses, cancel bots, Trojan horses, harmful code, flood pings, denial-of-service attacks, packet or IP spoofing, forged routing or electronic mail address information or similar methods or technology;
+may infringe any patent, trademark, trade secret, copyright or other intellectual or proprietary right of any party. By posting user content, you represent and warrant that you have the lawful right to distribute and reproduce such content; or
+would constitute, encourage or provide instructions for a criminal offense or violate the rights of any third party
+ 
+
+Drivn is not responsible for any user content that you or other members post, transmit or store through our services or products. We may, in our sole discretion, edit, remove or delete any user content without notice which is violating our guidelines or terms of use. If you become aware of Member Content that violates these terms, you may notify of us such content by using the reporting tools e.g. email us via mathiasklenk@gmx.de
+
+#3.2 Member conduct
+
+When accessing and using our services and products, you agree to act responsibility, with good judgment and act in the way that it in line with our community guidelines. Further, you agree not to:
+
+use our products or services in violation of any applicable law or regulation, including promoting or encouraging any illegal activity;
+infringe the rights of any third party, including without limitation, intellectual property, privacy, publicity or contractual rights;
+use our products or services in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying Drivn or that could damage, disable, overburden or impair the functioning of Drivn in any manner;
+use our services and products in connection with the distribution of spam (= unsolicited bulk e-mail or any other unsolicited messages of a commercial, religious, romantic, political or other nature not within the intended purposes of the Services);
+stalk, intimidate, threaten or otherwise harass or cause discomfort to any other users;
+collect or store any information about any other user other than as permitted on Drivn;
+use our services and products for any commercial purpose whatsoever, unless with prior written consent of us;
+register for more than one member account;
+impersonate any person or entity than yourself or the person / organization you are authorized to represent on Drivn
+circumvent or attempt to defeat any security or verification measure;
+hold yourself out as an agent, representative, employee or affiliate of Drivn;
+(l) assist any third party in doing any of the things mentioned here.
+#3.3 Member content license
+
+You agree that you own all of the user content you are posting to one of our services or products. If you post user content to our services, you hereby grant us a perpetual worldwide, irrevocable, royalty-free and fully sublicensable license to use, reproduce, display, perform, adapt, modify, create derivative works from, distribute, have distributed and promote such user content in any form, in all media now known or hereinafter created (including in emails or other communications to our users) to administer, operate, develop and otherwise provide the Drivn services.
+
+By submitting user content you further warrant that you (1) own and control all the rights of the content that you post or otherwise have the right to post this content to our services; (2) the user content is accurate and not misleading; and (3) that the user content you are posting doesn’t violate these terms and will not violate any rights of another person or entity.
+
+ 
+
+Improvement suggestions
+We warmly welcome any suggestions, questions, comments and ideas how we can improve our website. If you provide a submission you agree that it is non-confidential (unless we state it otherwise in written form) and it becomes our sole property. Therefore we shall own the exclusive right, including all property rights with unrestricted use and dissemination for any purpose, commercial or otherwise. We don’t have to provide you a compensation for that.
+
+ 
+
+Copyright and limited license
+If it is not otherwise marked, all services, content and other materials (especially including our logo, designs, texts, graphics, pictures, videos, information, data, software, sound files and other files and there arrangement) are property of Drivn or our licensors or users and are protected by international copyright laws.
+
+When you are using Jouneytags.com you are granted a limited, non-exclusive and non-sublicensable license to access and use our services and materials; nevertheless such a license is subject to these terms and does not include:
+
+any resale or commercial use of our material;
+the distribution, public performance or public display of our content and material;
+the modification or otherwise making any derivative uses of it, or any portion unless modification or derivative use is specifically permitted by us under a suitable law or terms;
+use of any data mining, robots or similar data gathering or extraction methods;
+downloading (other than the page caching) of any portion of
+any use of our content or other than for their intended purposes. Any use of our services or the Drivn material other than specifically authorized or without the prior written permission us, is strictly prohibited
+Unauthorized use may also violate applicable laws, including copyright and trademark laws. Unless explicitly stated herein, nothing in these Terms shall be construed as conferring any license to intellectual property rights, whether by estoppel, implication or otherwise. Please consider, that this license is revocable at any time.
+
+ 
+
+Copyright infringements or complains
+If you believe that any of our services also infringes your copyright, which you own or control, please send us a notification via mathiasklenk@gmx.de
+
+Please see 17 U.S.C. §512(c)(3) for the requirements of a proper notification. You should note that if you knowingly misrepresent in your notification that the material or activity is infringing, you will be liable for any damages, including costs and attorneys’ fees, incurred by us or the alleged infringer as the result of our relying upon such misrepresentation in removing or disabling access to the material or activity claimed to be infringing.
+
+ 
+
+Trademarks
+The Drivn or Drivn and any other of our service’s or product’s name may not be copied, imitated or used, in whole or in part, without our written permission.
+
+Furthermore our website’s or application’s look, including all headers, custom graphics, button icons and scripts, may not be copied, imitated or used, in whole or in part, without our prior written consent.
+
+We want to point out, that all other trademarks, product names, and logos mentioned in our products or services are the solel property of their respective owners. A reference in one of our products, services, processes or other information, by trade name, trademark, manufacturer, supplier or otherwise does not constitute or imply endorsement, sponsorship or recommendation thereof by us.
+
+ 
+
+ 
+
+Hyperlinks
+You are granted a limited, non-exclusive right to create a text hyperlink to our services or products. Such a hyperlink does not portray Drivn or any of our services in a wrong, misleading, derogatory or otherwise defamatory manner and provided further that the linking site does not contain any adult or illegal material or any material that is offensive, harassing or otherwise objectionable. This limited right may be revoked at any time. You are further no allowed to use our Drivn logo or other proprietary graphic of Drivn to link to our services without a written permission us. Further, you may not use, frame or utilize framing techniques to enclose any Drivn trademark, logo or other proprietary information, including the content of any text or the layout/design of any of our products or services without our express written consent.
+
+ 
+
+Third-party content
+While using our website or applications you may be exposed to content from other users or third parties, either directly on our services or products or via links to third-party websites. We do not control, endorse or check any Third-Party Content and therefore have no responsibility for their Content, including content that may be misleading, incomplete, erroneous, offensive, indecent or otherwise objectionable. Therefore you as user of our website have to evaluate, and bear all risks associated with, Third-Party Content.
+
+We incorporate Google Maps into the Services as a convenience to you. By using this feature of the Services, you agree to be bound by Google’s Terms of Use.
+
+ 
+
+Termination
+If you think that you are in breach with these terms or similar policies, like our community standards, we offer you at any time to:
+
+terminate your access to our services and products
+deactivate or delete your account (including all information)
+bar your access to any of such files
+In some cases, if we feel so, we also terminate a user’s account from our services, if we feel it is in the community’s interest.
+
+ 
+
+Discontinuance of services
+We may with or without notice and at any time, modify and change, temporarily or permanently, any portion of our services.
+
+ 
+
+User’s representation and warranties
+12.1 You hereby represent and warrant that you have the full power and authority to enter and perform under these terms. If you are using our services on behalf of any entity, you represent and warrant that you are authorized to accept these terms on such entity’s behalf.
+
+12.2 You hereby represent and warrant that you will use our Services in a manner consistent with any and all applicable local, state, national and international laws and regulations, including, but not limited to, United States export-control laws.
+
+12.3 You hereby represent and warrant that you will not use the services if the laws of your country prohibit you from doing so in accordance with these terms (for example, if you are not allowed to provide the types of personal information that we require or if you are prohibited from participating in certain Internet activity). By using the services, you represent and warrant that such use will not violate, or cause us to violate, the laws of your country.
+
+ 
+
+DISCLAIMER OF WARRANTIES
+13.1 IF YOU USE OUR SERVICES, YOU DO SO AT YOUR SOLE RISK. OUR SERVICES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE EXPRESSLY DISCLAIM, AND YOU WAIVE, ALL OTHER WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT AS TO THE SERVICES, INCLUDING THE INFORMATION, CONTENT AND MATERIALS CONTAINED THEREIN.
+
+13.2 WE DO NOT REPRESENT OR WARRANT THAT (A) OUR SERVICES WILL MEET YOUR REQUIREMENTS; (B) OUR SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE; (C) ANY INFORMATION THAT YOU MAY OBTAIN THROUGH OUR SERVICES WILL BE ACCURATE OR RELIABLE; (D) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH OUR SERVICES WILL MEET YOUR EXPECTATIONS; (E) ANY INFORMATION YOU PROVIDE OR WE COLLECT WILL NOT BE DISCLOSED TO THIRD PARTIES; OR (F) ANY ERRORS IN ANY DATA OR SOFTWARE WILL BE CORRECTED.
+
+13.3 IF YOU ACCESS OR TRANSMIT ANY CONTENT THROUGH THE USE OF OUR SERVICES, YOU DO SO AT YOUR OWN DISCRETION AND YOUR SOLE RISK. YOU ARE SOLELY RESPONSIBLE FOR ANY LOSS OR DAMAGE ARISING OUT OF SUCH ACCESS OR TRANSMISSION; THEREFORE, YOU SHOULD USE INDUSTRY-RECOGNIZED SOFTWARE TO DETECT AND DISINFECT VIRUSES FROM ANY DOWNLOAD.
+
+13.4 NO DATA, INFORMATION OR ADVICE OBTAINED BY YOU IN ORAL OR WRITTEN FORM FROM US OR THROUGH OR FROM OUR SERVICES WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THESE TERMS.
+
+ 
+
+LIMITS ON LIABILITY
+14.1 SUBJECT TO APPLICABLE LAW, IN NO EVENT SHALL DRIVN, OR OUR DIRECTORS, MEMBERS, EMPLOYEES OR AGENTS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, INCLUDING, BUT NOT LIMITED TO LOSS OF USE, LOSS OF PROFITS OR LOSS OF DATA, WHETHER IN AN ACTION IN CONTRACT, TORT (INCLUDING BUT NOT LIMITED TO NEGLIGENCE) OR OTHERWISE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, ARISING FROM OR RELATING TO: (A) THE USE OR INABILITY TO USE OUR SERVICES; (B) THE COST OF REPLACEMENT OF ANY GOODS, SERVICES OR INFORMATION PURCHASED OR OBTAINED AS A RESULT OF ANY INFORMATION OBTAINED FROM OR TRANSACTIONS ENTERED INTO THROUGH OR FROM OUR SERVICES; (C) DISCLOSURE OF, UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR CONTENT; (D) DAMAGES FOR LOSS OR CORRUPTION OF DATA OR PROGRAMS, SERVICE INTERRUPTIONS OR PROCUREMENT OF SUBSTITUTE SERVICES, EVEN IF WE KNOW OR HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES; (E) STATEMENTS, CONDUCT OR OMISSIONS OF ANY SERVICE PROVIDERS OR OTHER THIRD PARTY ON OUR SERVICES; (F) YOUR OR ANYONE ELSE’S CONDUCT OR ACTS IN CONNECTION WITH THE USE OF THE SERVICES; OR (G) ANY OTHER MATTER ARISING FROM, RELATING TO OR CONNECTED WITH OUR SERVICES OR THESE TERMS.
+
+14.2 WE SHALL NOT BE LIABLE FOR ANY FAILURE OR DELAY IN PERFORMING UNDER THESE TERMS, WHETHER OR NOT SUCH FAILURE OR DELAY IS DUE TO CAUSES BEYOND OUR REASONABLE CONTROL.
+
+14.3 IN NO EVENT WILL OUR AGGREGATE LIABILITY TO YOU OR ANY THIRD PARTY IN ANY MATTER ARISING FROM OR RELATING TO OUR SERVICES OR THESE TERMS EXCEED THE SUM OF ONE HUNDRED US DOLLARS ($100).
+
+14.4 SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES. ACCORDINGLY, SOME OF THE LIMITATIONS OF SECTIONS 16 AND 17 MAY NOT APPLY TO YOU.
+
+14.5 NOTWITHSTANDING ANYTHING TO THE CONTRARY IN THESE TERMS, NOTHING IN THESE TERMS EXCLUDES OR LIMITS OUR LIABILITY FOR DEATH OR PERSONAL INJURY CAUSED BY OUR NEGLIGENCE OR FOR FRAUD.
+
+ 
+
+INDEMNITY
+You shall defend, indemnify and hold harmless Jouneytags.com (and each of our officers, directors, members, employees, agents and affiliates) from any claim, demand, action, damage, loss, cost or expense, including without limitation reasonable attorneys’ fees, arising out of or relating to (a) your use of our Services; (b) any Member Content or Submissions you provide; (c) your violation of these Terms; (d) your violation of any rights of another; or (e) your conduct in connection with the Services. Further, if you are using the Services on behalf of any entity, you represent and warrant that such entity agrees to indemnify you and Drivn for violations of these Terms in accordance with this Section. If you are obligated to indemnify us, we will have the right, in our sole and unfettered discretion, to control any action or proceeding and determine whether we wish to settle it, and if so, on what terms.
+
+ 
+
+REPORTING MISCONDUCT
+If you interact with anyone through our services who you feel is acting or has acted inappropriately, including but not limited to offensive, violent or sexually inappropriate behavior, who steals from you or engages in any other disturbing conduct, we strongly encourage you to immediately report such person to the appropriate authorities and to us by contacting us using the mathiasklenk@gmx.de email contact. Please note that although we encourage you to report misconduct, we are not responsible or liable for our members’ actions, and we are not obligated to take any action.
+
+ 
+
+DISPUTES
+PLEASE READ THE FOLLOWING PARAGRAPH CAREFULLY BECAUSE IT REQUIRES YOU TO ARBITRATE DISPUTES WITH DRIVN AND IT LIMITS THE MANNER IN WHICH YOU CAN SEEK RELIEF. You and Drivn agree to arbitrate any dispute arising from these Terms or relating to the Services, except that you and Drivn are not required to arbitrate any dispute in which either party seeks equitable or other relief for the alleged unlawful use of copyrights, trademarks, trade names, logos, trade secrets or patents. SUBJECT TO ANY RIGHTS YOU MAY HAVE UNDER APPLICABLE LAW, ARBITRATION PREVENTS YOU FROM SUING IN COURT OR FROM HAVING A JURY TRIAL. You and Drivn agree that you will notify each other of any dispute within thirty (30) days of when it arises, that you will attempt informal resolution prior to any demand for arbitration, that any arbitration will occur in Munich, Germany. WHETHER THE DISPUTE IS HEARD IN ARBITRATION OR IN COURT, YOU AND DRIVN WILL NOT COMMENCE AGAINST THE OTHER A CLASS ACTION, CLASS ARBITRATION OR OTHER REPRESENTATIVE ACTION OR PROCEEDING.
+
+ 
+
+MISCELLANEOUS.
+18.1 Assignment. You may not assign any of your rights or obligations under these Terms without prior written consent from Drivn. Drivn may assign any or all of its rights under these Terms, in whole or in part, without obtaining your consent or approval.
+
+18.2 Entire Agreement. These terms contain the entire agreement, and supersede all prior and contemporaneous understandings, between the parties regarding their subject matter.
+
+18.3 Waiver. Our failure or delay in exercising any right, power or privilege under these terms shall not operate as a waiver thereof.
+
+18.4 Severability. The invalidity or unenforceability of any of these Terms shall not affect the validity or enforceability of any other of these terms, all of which shall remain in full force and effect.
+
+18.5 Headings. Headings of sections are for convenience only and shall not be used to limit or construe such sections.
+
+18.7 Survival. Sections 3.5 (Release), 4 (Member Conduct and Content), 5 (Submissions), 9 (Trademarks), 11 (Third-Party Content), 14 (Member’s Representations and Warranties), 15 (Disclaimer of Warranties), 16 (Limits on Liability), 17 (Indemnity), 19 (Disputes), and this Section 20 (Miscellaneous) shall survive any termination or expiration of these Terms.
+</string>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zhh-N2-U1E"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="zhh-N2-U1E"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOe-gL-gt0">
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HDy-EW-4gR"/>
+                                            <constraint firstAttribute="height" constant="40" id="lsE-RZ-mEI">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <state key="normal" title="Accept all terms">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HDy-EW-4gR"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="HDy-EW-4gR"/>
+                                                <exclude reference="lsE-RZ-mEI"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="acceptButton:" destination="Hph-LP-QTa" eventType="touchUpInside" id="6ul-kb-kX5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ev9-Hs-mMS" firstAttribute="centerX" secondItem="wX6-Z9-uZW" secondAttribute="centerX" id="18K-Zz-Nk1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ev9-Hs-mMS" secondAttribute="bottom" constant="96" id="LT5-BX-nGy"/>
+                                    <constraint firstItem="Ev9-Hs-mMS" firstAttribute="leading" secondItem="qT5-Zq-5zW" secondAttribute="leading" constant="20" id="LdL-eS-umo"/>
+                                    <constraint firstItem="yOe-gL-gt0" firstAttribute="leading" secondItem="qT5-Zq-5zW" secondAttribute="leading" id="MLF-D2-eb7"/>
+                                    <constraint firstItem="Ev9-Hs-mMS" firstAttribute="top" secondItem="wX6-Z9-uZW" secondAttribute="bottom" constant="10" id="Obt-BY-WyV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ev9-Hs-mMS" secondAttribute="trailing" constant="20" id="VDB-FE-MMj"/>
+                                    <constraint firstAttribute="bottom" secondItem="yOe-gL-gt0" secondAttribute="bottom" id="Yl4-9F-fND"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ev9-Hs-mMS" secondAttribute="trailing" constant="20" id="ceg-Cv-mhy"/>
+                                    <constraint firstItem="Ev9-Hs-mMS" firstAttribute="leading" secondItem="qT5-Zq-5zW" secondAttribute="leading" constant="20" id="cr7-K4-coA"/>
+                                    <constraint firstItem="Ev9-Hs-mMS" firstAttribute="leading" secondItem="qT5-Zq-5zW" secondAttribute="leading" constant="20" id="hjW-JE-iee"/>
+                                    <constraint firstItem="wX6-Z9-uZW" firstAttribute="centerX" secondItem="qT5-Zq-5zW" secondAttribute="centerX" id="p0Y-EM-WUF"/>
+                                    <constraint firstItem="Ev9-Hs-mMS" firstAttribute="top" secondItem="wX6-Z9-uZW" secondAttribute="bottom" constant="10" id="s2Z-8s-A3D"/>
+                                    <constraint firstItem="wX6-Z9-uZW" firstAttribute="top" secondItem="qT5-Zq-5zW" secondAttribute="top" constant="20" id="vuM-c6-0Vh"/>
+                                    <constraint firstAttribute="trailing" secondItem="yOe-gL-gt0" secondAttribute="trailing" id="w43-j8-0cs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ev9-Hs-mMS" secondAttribute="bottom" constant="20" id="wh2-zs-FJk"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="wX6-Z9-uZW"/>
+                                        <exclude reference="Ev9-Hs-mMS"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="vuM-c6-0Vh"/>
+                                        <exclude reference="p0Y-EM-WUF"/>
+                                        <exclude reference="cr7-K4-coA"/>
+                                        <exclude reference="wh2-zs-FJk"/>
+                                        <exclude reference="s2Z-8s-A3D"/>
+                                        <exclude reference="ceg-Cv-mhy"/>
+                                        <exclude reference="LT5-BX-nGy"/>
+                                        <exclude reference="LdL-eS-umo"/>
+                                        <exclude reference="Obt-BY-WyV"/>
+                                        <exclude reference="hjW-JE-iee"/>
+                                        <exclude reference="18K-Zz-Nk1"/>
+                                        <exclude reference="VDB-FE-MMj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="wX6-Z9-uZW"/>
+                                        <include reference="Ev9-Hs-mMS"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="vuM-c6-0Vh"/>
+                                        <include reference="p0Y-EM-WUF"/>
+                                        <exclude reference="cr7-K4-coA"/>
+                                        <exclude reference="wh2-zs-FJk"/>
+                                        <exclude reference="s2Z-8s-A3D"/>
+                                        <include reference="ceg-Cv-mhy"/>
+                                        <include reference="LT5-BX-nGy"/>
+                                        <include reference="LdL-eS-umo"/>
+                                        <include reference="Obt-BY-WyV"/>
+                                        <exclude reference="hjW-JE-iee"/>
+                                        <include reference="18K-Zz-Nk1"/>
+                                        <exclude reference="VDB-FE-MMj"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qT5-Zq-5zW" firstAttribute="top" secondItem="tyL-f9-fHe" secondAttribute="bottom" id="APh-I3-F8X"/>
+                            <constraint firstAttribute="trailing" secondItem="qT5-Zq-5zW" secondAttribute="trailing" id="JWg-d3-hML"/>
+                            <constraint firstItem="hby-5B-ESc" firstAttribute="top" secondItem="qT5-Zq-5zW" secondAttribute="bottom" id="UAu-ok-jIP"/>
+                            <constraint firstItem="qT5-Zq-5zW" firstAttribute="leading" secondItem="Y5C-9Y-eDe" secondAttribute="leading" id="cwu-PI-Xhz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qT5-Zq-5zW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="UAu-ok-jIP"/>
+                                <exclude reference="cwu-PI-Xhz"/>
+                                <exclude reference="APh-I3-F8X"/>
+                                <exclude reference="JWg-d3-hML"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qT5-Zq-5zW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="UAu-ok-jIP"/>
+                                <include reference="cwu-PI-Xhz"/>
+                                <include reference="APh-I3-F8X"/>
+                                <include reference="JWg-d3-hML"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKM-Rg-Chd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2086" y="1077"/>
+        </scene>
+        <!--My Account-->
+        <scene sceneID="0QM-4o-Um7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b6R-jl-VHU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Account" image="myAccount" id="KM4-ir-Ytm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rBL-3g-nMv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LvD-mc-JVV" kind="relationship" relationship="rootViewController" id="1zW-sm-fLK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNP-KP-bqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="1078.1109445277361"/>
+        </scene>
+        <!--Rating2 View Controller-->
+        <scene sceneID="eIl-Ef-aR8">
+            <objects>
+                <viewController id="g46-xq-5vG" customClass="Rating2ViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aIv-Gg-abK"/>
+                        <viewControllerLayoutGuide type="bottom" id="sTx-cR-hyX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M3F-Uj-ag2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wcf-y8-tWB">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How effective was Dr. Sanchez's prescription of amoxicillin in treating your strep throat?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-nB-5Hi">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="haT-wk-HAB">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="g46-xq-5vG" eventType="valueChanged" id="y7Y-fL-Joj"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="haT-wk-HAB" firstAttribute="leading" secondItem="wcf-y8-tWB" secondAttribute="leading" constant="15" id="jSp-F9-FZa"/>
+                                    <constraint firstAttribute="trailing" secondItem="haT-wk-HAB" secondAttribute="trailing" constant="15" id="wfr-XJ-RYO"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neutral" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXE-Zc-g1g">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbq-tl-A3k">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButton:" destination="g46-xq-5vG" eventType="touchUpInside" id="dGK-Xu-POm"/>
+                                    <segue destination="fe1-kh-5Pm" kind="show" id="EtY-Am-HUn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647155523300171" green="0.15027236938476562" blue="0.66134041547775269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wcf-y8-tWB" firstAttribute="centerY" secondItem="M3F-Uj-ag2" secondAttribute="centerY" id="Mx8-qR-K5A"/>
+                            <constraint firstItem="sTx-cR-hyX" firstAttribute="top" secondItem="Cbq-tl-A3k" secondAttribute="bottom" constant="50" id="Roh-69-hOr"/>
+                            <constraint firstItem="nXE-Zc-g1g" firstAttribute="top" secondItem="wcf-y8-tWB" secondAttribute="bottom" constant="8" id="Y4G-bP-nh9"/>
+                            <constraint firstItem="wcf-y8-tWB" firstAttribute="centerX" secondItem="M3F-Uj-ag2" secondAttribute="centerX" id="afk-wG-ti2"/>
+                            <constraint firstItem="nXE-Zc-g1g" firstAttribute="centerX" secondItem="wcf-y8-tWB" secondAttribute="centerX" id="bvH-zD-iyz"/>
+                            <constraint firstAttribute="trailing" secondItem="wcf-y8-tWB" secondAttribute="trailing" constant="25" id="iTm-SW-wAe"/>
+                            <constraint firstItem="Cbq-tl-A3k" firstAttribute="centerX" secondItem="M3F-Uj-ag2" secondAttribute="centerX" id="xzB-8L-Oqb"/>
+                            <constraint firstItem="wcf-y8-tWB" firstAttribute="leading" secondItem="M3F-Uj-ag2" secondAttribute="leading" constant="25" id="yae-ir-odZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="Cbq-tl-A3k" id="nkx-Q4-ItY"/>
+                        <outlet property="slider" destination="haT-wk-HAB" id="yXl-0h-awf"/>
+                        <outlet property="sliderResultLabel" destination="nXE-Zc-g1g" id="MIx-e2-vlQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d49-fL-ZYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5566" y="1075"/>
+        </scene>
+        <!--Rating3 View Controller-->
+        <scene sceneID="TFQ-I5-y6w">
+            <objects>
+                <viewController id="fe1-kh-5Pm" customClass="Rating3ViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rzk-AY-tsB"/>
+                        <viewControllerLayoutGuide type="bottom" id="vq2-ON-3iw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0oP-aX-6jY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WQg-w3-JKW">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you see Dr. Sanchez again?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMu-m2-gV8">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="W4Q-IC-K8o">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-0n-T0a">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="ADk-ik-YcU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="YES">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="yesButtonTapped:" destination="fe1-kh-5Pm" eventType="touchUpInside" id="wng-2u-pZm"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-R0-0VR">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="QsT-7u-ei5"/>
+                                                    <constraint firstAttribute="width" constant="2" id="kNc-yP-2cR"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pta-6X-EgV">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Z52-m6-ehs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="NO">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="noButtonTapped:" destination="fe1-kh-5Pm" eventType="touchUpInside" id="ohy-KG-xwR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="252-Le-9yn">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="fe1-kh-5Pm" eventType="touchUpInside" id="fc9-cc-SST"/>
+                                    <segue destination="vxj-KR-Nex" kind="show" id="pci-ZV-vNs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647155523300171" green="0.15027236938476562" blue="0.66134041547775269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vq2-ON-3iw" firstAttribute="top" secondItem="252-Le-9yn" secondAttribute="bottom" constant="50" id="2XV-7s-6ag"/>
+                            <constraint firstItem="WQg-w3-JKW" firstAttribute="centerY" secondItem="0oP-aX-6jY" secondAttribute="centerY" id="IWn-xF-hNr"/>
+                            <constraint firstItem="WQg-w3-JKW" firstAttribute="leading" secondItem="0oP-aX-6jY" secondAttribute="leading" constant="25" id="PsH-xL-9Po"/>
+                            <constraint firstItem="WQg-w3-JKW" firstAttribute="centerX" secondItem="0oP-aX-6jY" secondAttribute="centerX" id="SJd-sm-AEz"/>
+                            <constraint firstItem="252-Le-9yn" firstAttribute="centerX" secondItem="0oP-aX-6jY" secondAttribute="centerX" id="b85-Hr-I0v"/>
+                            <constraint firstAttribute="trailing" secondItem="WQg-w3-JKW" secondAttribute="trailing" constant="25" id="u09-Fi-orJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="252-Le-9yn" id="KQN-tS-qWB"/>
+                        <outlet property="noButton" destination="pta-6X-EgV" id="65l-0r-NI6"/>
+                        <outlet property="yesButton" destination="3m4-0n-T0a" id="vOd-hW-KQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Knb-LK-Tgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6329" y="1075"/>
+        </scene>
+        <!--Rating4 View Controller-->
+        <scene sceneID="Hc0-Nd-feE">
+            <objects>
+                <viewController id="vxj-KR-Nex" customClass="Rating4ViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ah-Ot-IWr"/>
+                        <viewControllerLayoutGuide type="bottom" id="9b2-S8-cWG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="leF-NL-Fqz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kUf-4d-fSA">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you recommend Dr. Sanchez to a friend?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQG-bH-c9E">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VeL-cb-UaG">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbq-zK-k1A">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="IQr-c3-6Em"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="YES">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="yesButtonTapped:" destination="vxj-KR-Nex" eventType="touchUpInside" id="T3i-fV-CID"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xfs-8m-VAG">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="AGc-gC-pxs"/>
+                                                    <constraint firstAttribute="width" constant="2" id="aBn-w8-6Ir"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXp-7H-wdl">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="IAZ-th-CJB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="NO">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="noButtonTapped:" destination="vxj-KR-Nex" eventType="touchUpInside" id="loH-7W-blt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-19-twg">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="vxj-KR-Nex" eventType="touchUpInside" id="QOl-eo-f8c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647155523300171" green="0.15027236938476562" blue="0.66134041547775269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kUf-4d-fSA" firstAttribute="centerX" secondItem="leF-NL-Fqz" secondAttribute="centerX" id="JZE-TQ-Zsq"/>
+                            <constraint firstAttribute="trailing" secondItem="kUf-4d-fSA" secondAttribute="trailing" constant="25" id="MOS-g7-i4n"/>
+                            <constraint firstItem="kUf-4d-fSA" firstAttribute="centerY" secondItem="leF-NL-Fqz" secondAttribute="centerY" id="NSn-EJ-FK1"/>
+                            <constraint firstItem="9b2-S8-cWG" firstAttribute="top" secondItem="LSY-19-twg" secondAttribute="bottom" constant="50" id="PU7-T6-8TY"/>
+                            <constraint firstItem="LSY-19-twg" firstAttribute="centerX" secondItem="leF-NL-Fqz" secondAttribute="centerX" id="qZR-2h-9W0"/>
+                            <constraint firstItem="kUf-4d-fSA" firstAttribute="leading" secondItem="leF-NL-Fqz" secondAttribute="leading" constant="25" id="rgP-Oc-nBU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noButton" destination="xXp-7H-wdl" id="uOL-0n-HOY"/>
+                        <outlet property="yesButton" destination="cbq-zK-k1A" id="3yi-v9-1Y5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOb-vO-u7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7086" y="1075"/>
+        </scene>
+        <!--Rating0 View Controller-->
+        <scene sceneID="u7K-pa-mf5">
+            <objects>
+                <viewController id="We7-y9-I1g" customClass="Rating0ViewController" customModule="treehacks17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPx-Wa-dF2"/>
+                        <viewControllerLayoutGuide type="bottom" id="gJ2-CH-ETd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a3V-Tf-cAS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your review of Dr. Sanchez:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-KQ-ICZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH8-Md-IPF">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="We7-y9-I1g" eventType="touchUpInside" id="ebm-0x-KVC"/>
+                                    <segue destination="Xat-Fd-sY1" kind="show" id="zHI-3a-91n"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Example: Dr. Kern is fantastic! He is an incredible kind and gentle doctor whi is very attentive and non-judgmental..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oEX-nz-Iwm">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="JWZ-5K-SpD"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647155523300171" green="0.15027236938476562" blue="0.66134041547775269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oEX-nz-Iwm" firstAttribute="top" secondItem="d7h-KQ-ICZ" secondAttribute="bottom" constant="8" id="0lF-mi-zbI"/>
+                            <constraint firstItem="oEX-nz-Iwm" firstAttribute="leading" secondItem="a3V-Tf-cAS" secondAttribute="leadingMargin" constant="25" id="13D-vS-Gho"/>
+                            <constraint firstItem="gJ2-CH-ETd" firstAttribute="top" secondItem="WH8-Md-IPF" secondAttribute="bottom" constant="50" id="3hD-c7-djX"/>
+                            <constraint firstItem="d7h-KQ-ICZ" firstAttribute="leading" secondItem="a3V-Tf-cAS" secondAttribute="leadingMargin" constant="25" id="B2g-f7-135"/>
+                            <constraint firstItem="WH8-Md-IPF" firstAttribute="centerX" secondItem="a3V-Tf-cAS" secondAttribute="centerX" id="D4M-B0-X46"/>
+                            <constraint firstItem="d7h-KQ-ICZ" firstAttribute="top" secondItem="hPx-Wa-dF2" secondAttribute="bottom" constant="50" id="JO4-kL-B1I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oEX-nz-Iwm" secondAttribute="trailing" constant="25" id="nP7-jt-3tM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedbackTextview" destination="oEX-nz-Iwm" id="hSi-ML-tn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjS-PL-0sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4040.8000000000002" y="1075.4122938530736"/>
         </scene>
     </scenes>
     <resources>
