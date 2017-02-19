@@ -10,6 +10,13 @@ import UIKit
 
 class ChatTableViewController: UITableViewController {
     
+    //Variables
+    var dictionaryWithDocs = [String: AnyObject]()
+    var arrayWithKeys = [String]()
+    
+    //Structure
+    let structure = FirebaseStruct()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +26,7 @@ class ChatTableViewController: UITableViewController {
         tabBarController?.tabBar.items?[2].badgeValue = nil
         
         setLogoStyles()
+        loadDataFromDatabase()
         
     }
 
@@ -33,6 +41,26 @@ class ChatTableViewController: UITableViewController {
         navigationItem.titleView = logoView
     }
     
+    func loadDataFromDatabase(){
+        
+        dictionaryWithDocs.removeAll()
+        
+        let refForReminder = self.structure.ref.child("patients/userID/doctors")
+        refForReminder.observeSingleEvent(of: .value, with: { snapshot in
+            
+            if snapshot.exists() || snapshot.value != nil {
+                
+                self.dictionaryWithDocs = snapshot.value as! [String : AnyObject]
+                
+                for (key, _) in self.dictionaryWithDocs {
+                    self.arrayWithKeys.append(key)
+                }
+                
+                self.tableView.reloadData()
+            }
+        })
+    }
+    
 
     // MARK: - Table view data source
 
@@ -43,13 +71,19 @@ class ChatTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return dictionaryWithDocs.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatDoctor", for: indexPath) as! ChatTableViewCell
 
+        //Fill label in cell
+        let key = arrayWithKeys[indexPath.row]
+        let doctor = dictionaryWithDocs[key]!
+        
+        cell.usernameLabel.text = doctor as! String
+        
         return cell
     }
 

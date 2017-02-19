@@ -15,7 +15,6 @@ class ReminderTableViewController: UITableViewController {
     var arrayWithAllReminders = [String: AnyObject]()
     var arrayWithKeys = [String]()
 
-    
     //Structure
     let structure = FirebaseStruct()
     
@@ -75,6 +74,15 @@ class ReminderTableViewController: UITableViewController {
         let key = arrayWithKeys[indexPath.row]
         let reminder = arrayWithAllReminders[key]!
         cell.notificationTitle.text = reminder["message"] as? String
+        cell.timeLabel.text = reminder["timestamp"] as? String
+        
+        if (reminder["category"] as? Int == 0) {
+            cell.notificationMarker.backgroundColor = UIColor.purple
+        } else if (reminder["category"] as? Int == 2) {
+            cell.notificationMarker.backgroundColor = UIColor.orange
+        } else {
+            //default
+        }
         
         //Style of the notificationmarker
         cell.notificationMarker.layer.masksToBounds = true;

@@ -14,6 +14,7 @@ class ReminderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var notificationMarker: UIButton!
     @IBOutlet weak var notificationTitle: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

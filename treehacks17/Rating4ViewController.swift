@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Rating4ViewController: UIViewController {
 
@@ -14,10 +15,12 @@ class Rating4ViewController: UIViewController {
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
-    
     //Variables
     var ratingResult = 1
     var surveyDictionary = [String: Any]()
+    
+    //Structure
+    var structure = FirebaseStruct()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,16 +49,18 @@ class Rating4ViewController: UIViewController {
     @IBAction func continueButtonTapped(_ sender: AnyObject) {
         surveyDictionary["recommendation"] = self.ratingResult
         print(surveyDictionary)
+        
+        let reference = structure.ref.child("docSurveys/IDdrSanchez")
+        let surveyRef = reference.childByAutoId()
+        surveyRef.setValue(surveyDictionary)
+        
+        backFour()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func backFour() {
+        
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 6], animated: true);
+        
     }
-    */
-
 }
